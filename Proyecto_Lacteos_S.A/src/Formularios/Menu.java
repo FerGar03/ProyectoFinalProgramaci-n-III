@@ -19,7 +19,6 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
         
-        setLocationRelativeTo(null);
         
         this.setTitle(" MENU ");
         this.setLocation(400,220);
@@ -69,6 +68,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem10.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Productos.png"))); // NOI18N
         jMenuItem10.setText("Nuevo Registro");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem10);
 
         jMenuBar1.add(jMenu1);
@@ -80,11 +84,21 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem5.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cliente.png"))); // NOI18N
         jMenuItem5.setText("Nuevo Registro");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
 
         jMenuItem9.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         jMenuItem9.setText("Buscar Registro");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem9);
 
         jMenuBar1.add(jMenu2);
@@ -116,11 +130,21 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem6.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario.png"))); // NOI18N
         jMenuItem6.setText("Inventario");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem6);
 
         jMenuItem7.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/devoluciones.png"))); // NOI18N
         jMenuItem7.setText("Devoluciones");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem7);
 
         jMenuItem8.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
@@ -150,7 +174,44 @@ public class Menu extends javax.swing.JFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        Envios env = new Envios();
+        env.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        registro_productos ingreso = new registro_productos();
+        ingreso.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+     this.setVisible(false);
+     clientes fmcli = new clientes();
+     fmcli.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+    this.setVisible(false);
+     clientes2 fmclientes2 = new clientes2();
+     fmclientes2.setVisible(true);
+     
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+       // TODO add your handling code here:
+       this.setVisible(false);
+       inventario inv = new inventario();
+       inv.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        devoluciones_producto dev = new devoluciones_producto();
+        dev.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments

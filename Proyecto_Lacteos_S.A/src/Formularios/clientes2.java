@@ -317,7 +317,8 @@ public class clientes2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField9ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         Menu ventana = new Menu ();
+        this.setVisible(false);
+        Menu ventana = new Menu ();
         ventana.setVisible (true);
 
         this.dispose();
