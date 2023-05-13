@@ -43,8 +43,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItemCS = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -107,20 +106,15 @@ public class Menu extends javax.swing.JFrame {
         jMenu3.setText("Usuario");
         jMenu3.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
 
-        jMenuItem1.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contraseña.png"))); // NOI18N
-        jMenuItem1.setText("Cambio de Contraseña");
-        jMenu3.add(jMenuItem1);
-
-        jMenuItem2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nuevo.png"))); // NOI18N
-        jMenuItem2.setText("Nuevo Usuario");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCS.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jMenuItemCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contraseña.png"))); // NOI18N
+        jMenuItemCS.setText("Cerrar Sesión");
+        jMenuItemCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItemCSActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu3.add(jMenuItemCS);
 
         jMenuBar1.add(jMenu3);
 
@@ -163,10 +157,6 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
        
@@ -213,6 +203,12 @@ public class Menu extends javax.swing.JFrame {
         dev.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jMenuItemCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCSActionPerformed
+        this.setVisible(false);
+        usuario_contraseña cs = new usuario_contraseña();
+        cs.setVisible(true);
+    }//GEN-LAST:event_jMenuItemCSActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -255,14 +251,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuItemCS;
     // End of variables declaration//GEN-END:variables
 
     void setUsuario(String usuario) {

@@ -194,14 +194,15 @@ public class usuario_contraseña extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnRegistrarseActionPerformed
 
     private void jbtnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAccederActionPerformed
-         Boolean guardar = true;
+
+        Boolean guardar = true;
         String mensaje = "";
         String usuario = txtusuario.getText();
         String contraseña = txtcontraseña.getText();
         
         if(usuario.length()==0){
            guardar = false;
-           mensaje+="deve llenar las casillas que se le solicita\n";
+           mensaje+="debe llenar las casillas que se le solicita\n";
         } 
         if(guardar){
            IniciarUsuario control = new IniciarUsuario();
@@ -213,9 +214,10 @@ public class usuario_contraseña extends javax.swing.JFrame {
            if(valido == 1) {
                  Menu ventana = new Menu ();
            
+            this.setVisible(false);
             ventana.setVisible (true);
             ventana.setUsuario(contraseña);
-            this.dispose();
+            //this.dispose();
             } else {
                mensaje = "Contraseña Incorrecta";
                JOptionPane.showMessageDialog(null, mensaje);
@@ -223,7 +225,7 @@ public class usuario_contraseña extends javax.swing.JFrame {
            
         }
         else JOptionPane.showMessageDialog(null, mensaje);
-       
+        
     }//GEN-LAST:event_jbtnAccederActionPerformed
 
     private void txtusuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtusuarioKeyTyped
