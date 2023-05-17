@@ -2,6 +2,7 @@ package Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -24,11 +25,11 @@ public class cls_conexion {
          CN = null;
         try{
             Class.forName(DRIVER);
-            CN = (Connection) DriverManager.getConnection(URL,USER,PASSWORD);
-            JOptionPane.showMessageDialog(null, "Conexion Exitosa", "Conexion",JOptionPane.INFORMATION_MESSAGE );
-    
+          CN = (Connection) DriverManager.getConnection(URL,USER,PASSWORD);
+            //JOptionPane.showMessageDialog(null, "Conexion Exitosa", "Conexion",JOptionPane.INFORMATION_MESSAGE );
+       
         } catch (ClassNotFoundException | SQLException ex){
-            JOptionPane.showInputDialog(null, ex.getMessage(), "NO SE HIZO LA CONEXIÓN A LA BASE DE DATOS", JOptionPane.ERROR_MESSAGE);
+         JOptionPane.showInputDialog(null, ex.getMessage(), "NO SE HIZO LA CONEXIÓN A LA BASE DE DATOS", JOptionPane.ERROR_MESSAGE);
             System.exit(0);
         }
         return CN;
