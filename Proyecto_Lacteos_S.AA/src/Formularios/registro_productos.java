@@ -75,6 +75,12 @@ public class registro_productos extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(102, 0, 204));
         jLabel5.setText("Observaciones");
 
+        jtextobs.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextobsKeyTyped(evt);
+            }
+        });
+
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 0, 204));
         jLabel6.setText(" ");
@@ -90,7 +96,7 @@ public class registro_productos extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -103,6 +109,11 @@ public class registro_productos extends javax.swing.JFrame {
         jtextnomp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtextnompActionPerformed(evt);
+            }
+        });
+        jtextnomp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextnompKeyTyped(evt);
             }
         });
 
@@ -247,8 +258,35 @@ public class registro_productos extends javax.swing.JFrame {
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error"+ex,"Ingreso", JOptionPane.ERROR_MESSAGE);
         } 
+        
+        jtextnomp.setText("");
+        
+        jtextdura.setText("");
+        jtextobs.setText("");
+        jcmbboxubi.setSelectedIndex(0); //posicion cero es la primera
 
     }//GEN-LAST:event_btnguardarActionPerformed
+
+    private void jtextnompKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextnompKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }// TODO add your handling code here:
+    }//GEN-LAST:event_jtextnompKeyTyped
+
+    private void jtextobsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextobsKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres"); }       // TODO add your handling code here:
+    }//GEN-LAST:event_jtextobsKeyTyped
 
     /**
      * @param args the command line arguments

@@ -189,6 +189,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextobs">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextobsKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -227,7 +230,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/salirr.png"/>
+              <Image iconType="3" name="/imagenes/salii.png"/>
             </Property>
           </Properties>
           <Events>
@@ -245,6 +248,7 @@
         <Component class="javax.swing.JTextField" name="jtextnomp">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextnompActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextnompKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="jcmbboxubi">

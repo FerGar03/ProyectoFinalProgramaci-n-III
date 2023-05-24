@@ -182,7 +182,7 @@ DefaultTableModel modelo;
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/client.png"))); // NOI18N
 
-        btnvolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
+        btnvolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         btnvolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnvolverActionPerformed(evt);
@@ -216,6 +216,34 @@ DefaultTableModel modelo;
                 jtextpnomActionPerformed(evt);
             }
         });
+        jtextpnom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextpnomKeyTyped(evt);
+            }
+        });
+
+        jtextsnom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextsnomKeyTyped(evt);
+            }
+        });
+
+        jtextap.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextapKeyTyped(evt);
+            }
+        });
+
+        jtextdpi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtextdpiActionPerformed(evt);
+            }
+        });
+        jtextdpi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextdpiKeyTyped(evt);
+            }
+        });
 
         jLabel6.setForeground(new java.awt.Color(102, 0, 204));
         jLabel6.setText("Dirección:");
@@ -228,6 +256,30 @@ DefaultTableModel modelo;
 
         jLabel9.setForeground(new java.awt.Color(102, 0, 204));
         jLabel9.setText("NIT");
+
+        jtextdir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextdirKeyTyped(evt);
+            }
+        });
+
+        jtexttel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtexttelKeyTyped(evt);
+            }
+        });
+
+        jtextemp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextempKeyTyped(evt);
+            }
+        });
+
+        jtextnit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextnitKeyTyped(evt);
+            }
+        });
 
         tblaclientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -250,14 +302,14 @@ DefaultTableModel modelo;
             }
         });
 
-        jbtnmodificar.setText("Modificar");
+        jbtnmodificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.png"))); // NOI18N
         jbtnmodificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnmodificarActionPerformed(evt);
             }
         });
 
-        jbtneliminar.setText("Eliminar");
+        jbtneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
         jbtneliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtneliminarActionPerformed(evt);
@@ -279,11 +331,11 @@ DefaultTableModel modelo;
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(141, 141, 141)
+                                .addGap(138, 138, 138)
                                 .addComponent(jbtnclientes, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbtnmodificar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(29, 29, 29)
+                                .addComponent(jbtnmodificar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
                                 .addComponent(jbtneliminar)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -344,54 +396,53 @@ DefaultTableModel modelo;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jbtnmodificar)
-                        .addComponent(jbtneliminar)
-                        .addComponent(jbtnclientes))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jtextpnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jtextdir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jtextsnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel7)
-                                        .addComponent(jtexttel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(12, 12, 12)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jtextap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jtextemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jtextdpi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jtextnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(40, 40, 40))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtextid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jtextpnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(jtextdir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnvolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(9, Short.MAX_VALUE))
+                            .addComponent(jLabel3)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jtextsnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel7)
+                                .addComponent(jtexttel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jtextap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(jtextemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jtextdpi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jtextnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtextid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnlimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jbtnmodificar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jbtneliminar))
+                            .addComponent(jbtnclientes)))
+                    .addComponent(btnvolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -480,6 +531,96 @@ DefaultTableModel modelo;
           
       }
     }//GEN-LAST:event_jbtneliminarActionPerformed
+
+    private void jtextpnomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextpnomKeyTyped
+
+    //sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    } 
+    }//GEN-LAST:event_jtextpnomKeyTyped
+
+    private void jtextsnomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextsnomKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextsnomKeyTyped
+
+    private void jtextdirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextdirKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdirKeyTyped
+
+    private void jtextempKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextempKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextempKeyTyped
+
+    private void jtextdpiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextdpiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdpiActionPerformed
+
+    private void jtextdpiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextdpiKeyTyped
+char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdpiKeyTyped
+
+    private void jtexttelKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtexttelKeyTyped
+char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtexttelKeyTyped
+
+    private void jtextnitKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextnitKeyTyped
+char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtextnitKeyTyped
+
+    private void jtextapKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextapKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextapKeyTyped
 
     /**
      * @param args the command line arguments

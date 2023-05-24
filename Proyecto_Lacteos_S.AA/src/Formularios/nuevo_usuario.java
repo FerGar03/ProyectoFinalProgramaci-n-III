@@ -42,9 +42,9 @@ public class nuevo_usuario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextUser = new javax.swing.JTextField();
-        jTextPass = new javax.swing.JTextField();
         jBtnGuardar = new javax.swing.JButton();
         jBtnVolver = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -64,6 +64,12 @@ public class nuevo_usuario extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(102, 0, 204));
         jLabel5.setText("Contraseña");
 
+        jTextUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextUserKeyTyped(evt);
+            }
+        });
+
         jBtnGuardar.setBackground(new java.awt.Color(204, 204, 204));
         jBtnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardarr.png"))); // NOI18N
         jBtnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -73,10 +79,16 @@ public class nuevo_usuario extends javax.swing.JFrame {
         });
 
         jBtnVolver.setBackground(new java.awt.Color(204, 204, 204));
-        jBtnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
+        jBtnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         jBtnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnVolverActionPerformed(evt);
+            }
+        });
+
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyTyped(evt);
             }
         });
 
@@ -86,7 +98,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(27, 27, 27)
@@ -94,7 +106,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextPass, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPasswordField1)))
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addContainerGap(27, Short.MAX_VALUE))
@@ -117,7 +129,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jLabel1)))
@@ -154,8 +166,20 @@ public class nuevo_usuario extends javax.swing.JFrame {
     private void jBtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGuardarActionPerformed
         //LLama a la clase "consultas" para registrar los datos de un nuevo usuario
         consultas con = new consultas();
-        con.guardarUsuario(jTextUser.getText(), jTextPass.getText());
+        con.guardarUsuario(jTextUser.getText(), jPasswordField1.getText());
+        
+                jTextUser.setText("");
+        jPasswordField1.setText("");
+
     }//GEN-LAST:event_jBtnGuardarActionPerformed
+
+    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1KeyTyped
+
+    private void jTextUserKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextUserKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextUserKeyTyped
 
     /**
      * @param args the command line arguments
@@ -199,7 +223,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextPass;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextUser;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables

@@ -134,7 +134,7 @@ public class clientes2 extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -175,6 +175,17 @@ public class clientes2 extends javax.swing.JFrame {
                 jtextpnomActionPerformed(evt);
             }
         });
+        jtextpnom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextpnomKeyTyped(evt);
+            }
+        });
+
+        jtextsnom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextsnomKeyTyped(evt);
+            }
+        });
 
         jtextap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,9 +193,43 @@ public class clientes2 extends javax.swing.JFrame {
             }
         });
 
+        jtextdpi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextdpiKeyTyped(evt);
+            }
+        });
+
+        jtextdir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtextdirActionPerformed(evt);
+            }
+        });
+        jtextdir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextdirKeyTyped(evt);
+            }
+        });
+
+        jtexttel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtexttelKeyTyped(evt);
+            }
+        });
+
         jtextemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtextempActionPerformed(evt);
+            }
+        });
+        jtextemp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextempKeyTyped(evt);
+            }
+        });
+
+        jtextnit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextnitKeyTyped(evt);
             }
         });
 
@@ -362,8 +407,100 @@ public class clientes2 extends javax.swing.JFrame {
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error"+ex,"Ingreso", JOptionPane.ERROR_MESSAGE);
         } 
-    
+    jtextpnom.setText("");
+        
+        jtextsnom.setText("");
+        jtextap.setText("");
+        jtextdpi.setText("");
+        jtextdir.setText("");
+        jtexttel.setText("");
+        jtextemp.setText("");
+         jtextnit.setText("");
+
     }//GEN-LAST:event_jbtnguardarActionPerformed
+
+    private void jtextdpiKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextdpiKeyTyped
+//sentecia de ingresar solo letras    
+       char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }  
+           // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdpiKeyTyped
+
+    private void jtextnitKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextnitKeyTyped
+//sentecia de ingresar solo letras    
+ char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextnitKeyTyped
+
+    private void jtexttelKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtexttelKeyTyped
+//sentecia de ingresar solo letras    
+      char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }  
+       // TODO add your handling code here:
+    }//GEN-LAST:event_jtexttelKeyTyped
+
+    private void jtextpnomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextpnomKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextpnomKeyTyped
+
+    private void jtextsnomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextsnomKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextsnomKeyTyped
+
+    private void jtextdirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextdirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdirActionPerformed
+
+    private void jtextdirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextdirKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdirKeyTyped
+
+    private void jtextempKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextempKeyTyped
+//sentecia de ingresar solo letras    
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }         // TODO add         // TODO add your handling code here:
+    }//GEN-LAST:event_jtextempKeyTyped
 
     /**
      * @param args the command line arguments

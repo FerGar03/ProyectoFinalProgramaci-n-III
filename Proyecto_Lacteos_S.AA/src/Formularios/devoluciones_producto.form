@@ -173,7 +173,7 @@
         <Component class="javax.swing.JButton" name="btnsalir">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/salirr.png"/>
+              <Image iconType="3" name="/imagenes/salii.png"/>
             </Property>
           </Properties>
           <Events>
@@ -216,6 +216,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextcan">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextcanActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextcanKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="cmbboxproducto">
           <Properties>
@@ -238,6 +242,9 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextdate">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextdateKeyTyped"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>

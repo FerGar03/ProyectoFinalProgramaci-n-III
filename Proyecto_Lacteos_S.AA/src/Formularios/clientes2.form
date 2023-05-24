@@ -229,7 +229,7 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/salirr.png"/>
+              <Image iconType="3" name="/imagenes/salii.png"/>
             </Property>
           </Properties>
           <Events>
@@ -317,9 +317,13 @@
         <Component class="javax.swing.JTextField" name="jtextpnom">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextpnomActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextpnomKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextsnom">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextsnomKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextap">
           <Events>
@@ -327,17 +331,31 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextdpi">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextdpiKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextdir">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextdirActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextdirKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtexttel">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtexttelKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextemp">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextempActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextempKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtextnit">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtextnitKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

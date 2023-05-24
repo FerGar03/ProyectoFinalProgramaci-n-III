@@ -57,14 +57,14 @@ public class ingreso_producto extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(102, 0, 204));
         jLabel1.setText("Producto");
 
-        btnguardar.setText("Guardar");
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardarr.png"))); // NOI18N
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnguardarActionPerformed(evt);
             }
         });
 
-        btnsalir.setText("Salir");
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalirActionPerformed(evt);
@@ -73,6 +73,12 @@ public class ingreso_producto extends javax.swing.JFrame {
 
         jLabel2.setForeground(new java.awt.Color(102, 0, 204));
         jLabel2.setText("Cantidad");
+
+        jtextcantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextcantidadKeyTyped(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("INGRESO DE PRODUCTO");
@@ -94,13 +100,14 @@ public class ingreso_producto extends javax.swing.JFrame {
                                 .addComponent(jtextcantidad, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(combo_productos, javax.swing.GroupLayout.Alignment.LEADING, 0, 152, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
                                 .addComponent(btnguardar)
-                                .addGap(38, 38, 38)
+                                .addGap(36, 36, 36)
                                 .addComponent(btnsalir))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(jLabel3)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,10 +123,10 @@ public class ingreso_producto extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jtextcantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnguardar)
                     .addComponent(btnsalir))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,8 +200,30 @@ public class ingreso_producto extends javax.swing.JFrame {
         }catch(SQLException e){
         
              JOptionPane.showMessageDialog(null,"Error al insertar/actualizar datos en la tabla 'stock': "+e,"Ingreso", JOptionPane.ERROR_MESSAGE);
+             
+             
         }
+        
+ //limpiar casillas
+        
+             
+        jtextcantidad.setText("");
+         combo_productos.setSelectedIndex(0); //posicion cero es la primera
+         
+        
+        
+
     }//GEN-LAST:event_btnguardarActionPerformed
+
+    private void jtextcantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextcantidadKeyTyped
+char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtextcantidadKeyTyped
 
     /**
      * @param args the command line arguments

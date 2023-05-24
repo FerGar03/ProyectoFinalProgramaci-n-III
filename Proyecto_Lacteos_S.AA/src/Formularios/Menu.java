@@ -65,6 +65,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem10.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Productos.png"))); // NOI18N
         jMenuItem10.setText("Nuevo Producto");
@@ -75,7 +76,9 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem10);
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2.png"))); // NOI18N
         jMenuItem2.setText("Ingreso de Producto");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +93,9 @@ public class Menu extends javax.swing.JFrame {
         jMenu2.setText("Clientes");
         jMenu2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user.png"))); // NOI18N
         jMenuItem1.setText("Registro de Clientes");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +104,7 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem5.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cliente.png"))); // NOI18N
         jMenuItem5.setText("Control de Clientes");
@@ -115,6 +121,7 @@ public class Menu extends javax.swing.JFrame {
         jMenu3.setText("Usuario");
         jMenu3.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
 
+        jMenuItemCS.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemCS.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jMenuItemCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contraseña.png"))); // NOI18N
         jMenuItemCS.setText("Cerrar Sesión");
@@ -130,6 +137,7 @@ public class Menu extends javax.swing.JFrame {
         jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/proo.png"))); // NOI18N
         jMenu5.setText("Almacen");
 
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem6.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario.png"))); // NOI18N
         jMenuItem6.setText("Inventario");
@@ -140,6 +148,7 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem6);
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem7.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/devoluciones.png"))); // NOI18N
         jMenuItem7.setText("Devoluciones");
@@ -150,6 +159,7 @@ public class Menu extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem7);
 
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem8.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Envios.png"))); // NOI18N
         jMenuItem8.setText("Envios");

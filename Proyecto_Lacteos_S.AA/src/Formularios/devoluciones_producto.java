@@ -117,7 +117,7 @@ public class devoluciones_producto extends javax.swing.JFrame {
             }
         });
 
-        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salirr.png"))); // NOI18N
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salii.png"))); // NOI18N
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsalirActionPerformed(evt);
@@ -136,6 +136,23 @@ public class devoluciones_producto extends javax.swing.JFrame {
 
         jLabel4.setForeground(new java.awt.Color(102, 0, 204));
         jLabel4.setText("Cliente");
+
+        jtextcan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtextcanActionPerformed(evt);
+            }
+        });
+        jtextcan.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextcanKeyTyped(evt);
+            }
+        });
+
+        jtextdate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtextdateKeyTyped(evt);
+            }
+        });
 
         tbldevoluciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -303,7 +320,42 @@ public class devoluciones_producto extends javax.swing.JFrame {
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error"+ex,"Ingreso", JOptionPane.ERROR_MESSAGE);
         }
+        
+        //limpiar casillas
+        
+                jtextcan.setText("");
+        jtextdate.setText("");
+         cmbboxproducto.setSelectedIndex(0); //posicion cero es la primera
+          cmbboxcliente.setSelectedIndex(0); //posicion cero es la primera
+         
     }//GEN-LAST:event_btnguardarActionPerformed
+
+    private void jtextcanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextcanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtextcanActionPerformed
+
+    private void jtextcanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextcanKeyTyped
+
+        
+        //sentencia para ingresar solo numeros
+        char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtextcanKeyTyped
+
+    private void jtextdateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextdateKeyTyped
+char numeros=evt.getKeyChar();
+    if (Character.isLetter(numeros)) {
+        getToolkit().beep();
+    
+        evt.consume();
+    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
+    }          // TODO add your handling code here:
+    }//GEN-LAST:event_jtextdateKeyTyped
 
     /**
      * @param args the command line arguments
