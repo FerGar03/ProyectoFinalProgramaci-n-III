@@ -20,7 +20,7 @@ import java.sql.ResultSet;
  * @author HP
  */
 public class consultas {
-     
+     //Metodo para guardar un usuario en la tabla "usuarios"
      public void guardarUsuario(String usuario, String password){
         
         cls_conexion db = new cls_conexion();
@@ -38,6 +38,7 @@ public class consultas {
             System.out.println(e);
         }
 }
+     //Metodo para dar o no acceso a la aplicacion
      public void accesoUsuario(String user, String pass)
      {
       // TODO add your handling code here:

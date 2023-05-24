@@ -11,6 +11,7 @@ import java.sql.ResultSet;
  *
  * @author HP
  */
+//Metodo para dar un id a los clientes de forma autoincrementable
 public class id_ai {
     public int id_incrementable(){
         int id= 1;

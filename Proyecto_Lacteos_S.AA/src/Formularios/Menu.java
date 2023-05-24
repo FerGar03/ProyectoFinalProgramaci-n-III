@@ -39,6 +39,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -66,13 +67,22 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuItem10.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Productos.png"))); // NOI18N
-        jMenuItem10.setText("Nuevo Registro");
+        jMenuItem10.setText("Nuevo Producto");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem10);
+
+        jMenuItem2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        jMenuItem2.setText("Ingreso de Producto");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
@@ -162,20 +172,21 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+        //Se oculta esta ventana y se accede a la ventana de "envios"
         this.setVisible(false);
         Envios env = new Envios();
         env.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
+        // Se oculta esta ventana y se accede a la ventana de "registro de productos"
         this.setVisible(false);
         registro_productos ingreso = new registro_productos();
         ingreso.setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+     //Se oculta esta Ventana y se accede a la ventana de "clientes"
      this.setVisible(false);
      clientes fmcli = new clientes();
      fmcli.setVisible(true);
@@ -183,30 +194,39 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-       // TODO add your handling code here:
+       // Se oculta esta ventana y se accede a la ventana de "inventario"
        this.setVisible(false);
        inventario inv = new inventario();
        inv.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
+        // Se oculta esta ventana y se accede a la ventana de "devoluciones_producto"
         this.setVisible(false);
         devoluciones_producto dev = new devoluciones_producto();
         dev.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItemCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCSActionPerformed
+       //Se oculta esta ventana y se accede a la ventana de "usuario_contraseña"
         this.setVisible(false);
         usuario_contraseña cs = new usuario_contraseña();
         cs.setVisible(true);
     }//GEN-LAST:event_jMenuItemCSActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+     //Se oculta esta ventana y se accede a la ventana de "clientes2"
      this.setVisible(false);
      clientes2 fmcli2 = new clientes2();
      fmcli2.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    //Se oculta esta ventana y se accede a la ventana de "ingreso_producto"
+    this.setVisible(false);
+    ingreso_producto fmlpro = new ingreso_producto();
+    fmlpro.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,6 +272,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
@@ -259,7 +280,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCS;
     // End of variables declaration//GEN-END:variables
 
-    void setUsuario(String usuario) {
+    public void setUsuario(String contraseña) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

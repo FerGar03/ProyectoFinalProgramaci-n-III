@@ -5,7 +5,7 @@
 package Formularios;
 
 import Conexion.cls_conexion;
-import Conexion.id_ai;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -17,8 +17,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.table.DefaultTableModel;
-import java.sql.*;
-import javax.swing.plaf.metal.MetalBorders;
+
 
 /**
  *
@@ -40,6 +39,8 @@ DefaultTableModel modelo;
         this.setLocation(400,220);
        
     }
+        //Metodo que permite eliminar un registro de la tabla "clientes"
+        //se utiliza el id de los clientes (idclientes) para eliminar todos los datos asociado a esta primary key
         public void eliminarRegistro(String valor){
         String sSQL="";
         try{
@@ -62,49 +63,8 @@ DefaultTableModel modelo;
         }
         
     }
-        void editarRegistro(String valor){
-        String sSQL="";
-        String nom1="", nom2="",ap="", dpi="", dir="", emp="";
-        int cliente=0, tel=0,nit=0;
-      
-        try{
-            cls_conexion mysql =new cls_conexion();
-          Connection cn= mysql.getConnection();
-          sSQL= "Select*from clientes where idclientes="+valor+";";
-          try{
-             Statement st= cn.createStatement();
-             ResultSet rs= st.executeQuery(sSQL);
-             while(rs.next()){
-               cliente=rs.getInt("idclientes");
-               nom1=rs.getString("primer_nombre");
-               nom2=rs.getString("segundo_nombre");
-               ap=rs.getString("apellidos");
-               dpi=rs.getString("dpi");
-               dir=rs.getString("direccion");
-               tel=rs.getInt("telefono");
-               emp=rs.getString("nombre_empresa");
-               nit=rs.getInt("numero_nit");
-             }
-             jtextid.setText(""+cliente);
-             jtextpnom.setText(nom1);
-             jtextsnom.setText(nom2);
-             jtextap.setText(ap);                         
-             jtextdpi.setText(dpi);
-             jtextdir.setText(dir);
-             jtexttel.setText(""+tel);
-             jtextemp.setText(emp);
-             jtextnit.setText(""+nit);
-            
-             
-                      
-          }catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Error"+e, "Error", JOptionPane.ERROR_MESSAGE);  
-          }
-        }catch(Exception e){
-           JOptionPane.showMessageDialog(this, "Error en la conexion"+e, "Error", JOptionPane.ERROR_MESSAGE);
-        }
-                
-}
+    // Este es un metodo que permite agregar un popup a la tabla "tblaclientes"
+    //Además se le asigna una acción que permite setear los datos de la tabla "clientes" en los campos del formulario, 
     public void popupTable(){
         JPopupMenu popupMenu = new JPopupMenu();
         JMenuItem menuItem1 = new JMenuItem("Editar Registro");
@@ -134,6 +94,7 @@ DefaultTableModel modelo;
         popupMenu.add(menuItem1);
         tblaclientes.setComponentPopupMenu(popupMenu);
     }
+    //Este metodo permite mostrar en tblaclientes los datos de la tabla "clientes"
     public void mostrar(String tabla){
         String sql = "select * from " + tabla;
         Statement st;
@@ -177,33 +138,7 @@ DefaultTableModel modelo;
     
     
     
-    //void CargarTabla(int valor){
-        
-    //    String sSQL="";
-    //    modelo=new DefaultTableModel(null,titulos);
-    //    cls_conexion mysql=new cls_conexion();
-    //    Connection cn=mysql.getConnection();
-    //    sSQL="SELECT * FROM clientes WHERE idclientes LIKE '%"+valor+"%'";
-    //    try{
-    //        Statement st=cn.createStatement();
-    //        ResultSet rs=st.executeQuery(sSQL);
-    //      while(rs.next()){
-    //            datos[0]=rs.getString("idclientes");
-    //            datos[1]=rs.getString("primer_nombre");
-    //            datos[2]=rs.getString("segundo_nombre");
-    //            datos[3]=rs.getString("apellidos");
-    //            datos[4]=rs.getString("dpi");
-    //            datos[5]=rs.getString("direccion");
-    //            datos[6]=rs.getString("telefono");
-    //            datos[7]=rs.getString("nombre_empresa");
-    //            datos[8]=rs.getString("numero_nit");            
-    //            modelo.addRow(datos);
-    //        }
-    //        tblaclientes.setModel(modelo);
-    //    }catch(SQLException ex){
-    //       JOptionPane.showMessageDialog(null,"Error "+ex ,"Error", JOptionPane.ERROR_MESSAGE);
-    //  }
-    //}
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -474,6 +409,7 @@ DefaultTableModel modelo;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverActionPerformed
+        //Oculta esta ventana para volver a la ventana "Menu"
         this.setVisible(false);
         Menu ventana = new Menu ();
         ventana.setVisible (true);
@@ -482,6 +418,7 @@ DefaultTableModel modelo;
     }//GEN-LAST:event_btnvolverActionPerformed
 
     private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
+     //Este boton setea todos lso campos en null para que estén vacíos
      jtextpnom.setText(null);
      jtextsnom.setText(null);
      jtextap.setText(null);
@@ -498,10 +435,13 @@ DefaultTableModel modelo;
     }//GEN-LAST:event_jtextpnomActionPerformed
 
     private void jbtnclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnclientesActionPerformed
+     //este boton aplica el metodo de mostra la tabla
      mostrar("clientes");
     }//GEN-LAST:event_jbtnclientesActionPerformed
 
     private void jbtnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnmodificarActionPerformed
+        //Este metodo se utilza para tomar los datos anteriormente seteados en los campos y los aplica en una 
+        //sentencia SQL para actualizar los datos de una fila utilizando el id de los clientes como referncia para la busqueda
         cls_conexion cn = new cls_conexion();
         Connection conexion = cn.getConnection();
        try{ 
@@ -520,7 +460,10 @@ DefaultTableModel modelo;
     }//GEN-LAST:event_jbtnmodificarActionPerformed
 
     private void jbtneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtneliminarActionPerformed
-          int fila;
+        //Este metodo se utiliza para eliminar una fila de la tabla "clientes" seleccionando el id de los clientes
+        //que se encuentra en la columna 0 de tblaclientes
+        
+        int fila;
       try{
        fila= tblaclientes.getSelectedRow();
        if(fila==-1){

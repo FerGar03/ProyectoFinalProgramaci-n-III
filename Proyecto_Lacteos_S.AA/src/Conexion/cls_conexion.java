@@ -2,7 +2,6 @@ package Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -16,9 +15,7 @@ public class cls_conexion {
     private static final String URL         = "jdbc:mysql://localhost:3306/lacteos_s.a";
     private Connection CN;
     
-    //public cls_conexion (){
-    //    CN = null;
-    //}
+    
 
 // ESTABLECEMOS CONEXION CON LA BASE DE DATOS
     public Connection getConnection() {

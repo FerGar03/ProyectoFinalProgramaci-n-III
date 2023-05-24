@@ -143,6 +143,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVolverActionPerformed
+        //Oculta esta ventana y vuelve a la ventana "usuario_contraseña"
         this.setVisible(false);
         usuario_contraseña f2 = new usuario_contraseña();
          f2.setVisible (true);
@@ -151,7 +152,7 @@ public class nuevo_usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnVolverActionPerformed
 
     private void jBtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGuardarActionPerformed
-        // TODO add your handling code here:
+        //LLama a la clase "consultas" para registrar los datos de un nuevo usuario
         consultas con = new consultas();
         con.guardarUsuario(jTextUser.getText(), jTextPass.getText());
     }//GEN-LAST:event_jBtnGuardarActionPerformed
