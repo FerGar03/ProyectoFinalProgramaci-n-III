@@ -279,7 +279,7 @@ public class registro_productos extends javax.swing.JFrame {
     }//GEN-LAST:event_jtextnompKeyTyped
 
     private void jtextobsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextobsKeyTyped
-//sentecia de ingresar solo letras    
+//sentecia de ingresar solo letras y caracteres ///    
         char numeros=evt.getKeyChar();
     if (Character.isDigit(numeros)) {
         getToolkit().beep();
