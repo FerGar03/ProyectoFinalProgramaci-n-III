@@ -194,37 +194,38 @@ public class usuario_contraseña extends javax.swing.JFrame {
 
     private void jbtnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAccederActionPerformed
 
-        Boolean guardar = true;
-        String mensaje = "";
-        String usuario = txtusuario.getText();
-        String contraseña = txtcontraseña.getText();
-        
-        if(usuario.length()==0){
-           guardar = false;
-           mensaje+="debe llenar las casillas que se le solicita\n";
-        } 
-        if(guardar){
-           IniciarUsuario control = new IniciarUsuario();
-           
-           int valido = control.comprobar(usuario, contraseña);
-           txtusuario.setText("");
-           txtcontraseña.setText("");
-           
-           if(valido == 1) {
-                 Menu ventana = new Menu ();
-           
-            this.setVisible(false);
-            ventana.setVisible (true);
-            ventana.setUsuario(contraseña);
-            //this.dispose();
-            } else {
-               mensaje = "Contraseña Incorrecta";
-               JOptionPane.showMessageDialog(null, mensaje);
-           }
-           
-        }
-        else JOptionPane.showMessageDialog(null, mensaje);
-        
+       Boolean guardar = true; // Variable booleana para controlar si se debe guardar o no
+String mensaje = ""; // Variable para almacenar mensajes de error
+String usuario = txtusuario.getText(); // Obtener el valor del campo de texto de usuario
+String contraseña = txtcontraseña.getText(); // Obtener el valor del campo de texto de contraseña
+
+if(usuario.length()==0){
+    guardar = false;
+    mensaje+="Debe llenar las casillas que se le solicita\n"; // Agregar mensaje de error si el campo de usuario está vacío
+} 
+
+if(guardar){
+    IniciarUsuario control = new IniciarUsuario(); // Crear una instancia de la clase IniciarUsuario
+
+    int valido = control.comprobar(usuario, contraseña); // Verificar el usuario y contraseña utilizando el método comprobar
+
+    txtusuario.setText(""); // Limpiar el campo de texto de usuario
+    txtcontraseña.setText(""); // Limpiar el campo de texto de contraseña
+
+    if(valido == 1) {
+        Menu ventana = new Menu(); // Crear una instancia de la clase Menu
+
+        this.setVisible(false); // Ocultar la ventana actual
+        ventana.setVisible(true); // Mostrar la ventana del menú
+        ventana.setUsuario(contraseña); // Establecer el usuario en la ventana del menú
+        //this.dispose();
+    } else {
+        mensaje = "Contraseña Incorrecta"; // Actualizar el mensaje de error
+        JOptionPane.showMessageDialog(null, mensaje); // Mostrar mensaje de error en un cuadro de diálogo
+    }
+} else {
+    JOptionPane.showMessageDialog(null, mensaje); // Mostrar mensaje de error en un cuadro de diálogo
+}
     }//GEN-LAST:event_jbtnAccederActionPerformed
 
     private void txtusuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtusuarioKeyTyped

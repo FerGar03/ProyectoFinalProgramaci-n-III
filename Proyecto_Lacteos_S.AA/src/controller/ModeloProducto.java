@@ -8,6 +8,8 @@ package controller;
  *
  * @author Iber Ramos Tzir
  */
+
+ // Variables miembro privadas
 public class ModeloProducto {
     private int codigoProductos;
     private String numeroProductos;
@@ -20,35 +22,35 @@ public class ModeloProducto {
     private String fechaIngresa;
     
    
-
+  // Método getter para obtener el código del producto
     public int getCodigoProductos() {
         return codigoProductos;
     }
-
+// Método setter para establecer el código del producto
     public void setCodigoProductos(int codigoProductos) {
         this.codigoProductos = codigoProductos;
     }
-
+// Método getter para obtener el número del producto
     public String getNumeroProductos() {
         return numeroProductos;
     }
-
+// Método setter para establecer el número del producto
     public void setNumeroProductos(String numeroProductos) {
         this.numeroProductos = numeroProductos;
     }
-
+// Método getter para obtener la serie del producto
     public String getSerie() {
         return serie;
     }
-
+// Método setter para establecer la serie del producto
     public void setSerie(String serie) {
         this.serie = serie;
     }
-
+ // Método getter para obtener la descripción del producto
     public String getDescripcion() {
         return descripcion;
     }
-
+// Método setter para establecer la descripción del producto
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }

@@ -10,13 +10,14 @@ package controller;
  */
 public class ModeloRegistro {
 
+// Variables miembro privadas
     private String usuario;
     private String contraseña;
 
     public String getUsuario() {
         return usuario;
     }
-
+ // Método getter para obtener el usuario
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
