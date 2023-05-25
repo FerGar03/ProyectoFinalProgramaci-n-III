@@ -11,7 +11,7 @@ public class cls_conexion {
     
     private static final String DRIVER      = "com.mysql.cj.jdbc.Driver";
     private static final String USER        = "root";
-    private static final String PASSWORD    = "IBERDisra1804.";
+    private static final String PASSWORD    = "root";
     private static final String URL         = "jdbc:mysql://localhost:3306/lacteos_s.a";
     private Connection CN;
     
