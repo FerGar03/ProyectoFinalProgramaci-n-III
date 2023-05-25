@@ -7,7 +7,7 @@ package Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-//Metodo para dar un id a las devoluciones de forma autoincrementable
+//Metodo para dar un id a las devoluciones de forma autoincrementable//////
 public class id_devoluciones {
     public int id_incrementabledev(){
         int id= 1;

@@ -38,7 +38,7 @@ public class devoluciones_producto extends javax.swing.JFrame {
         cargarProducto(cmbboxproducto);
         cargarCliente(cmbboxcliente);
     }
-    //Metodo qu epermite mostrar en tbladevoluciones los datos de la tabal "devoluciones"
+    //Metodo qu epermite mostrar en tbladevoluciones los datos de la tabal "devoluciones"/////
     public void mostrar(String tabla){
         String sql = "select * from " + tabla;
         Statement st;
