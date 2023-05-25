@@ -302,14 +302,14 @@ DefaultTableModel modelo;
             }
         });
 
-        jbtnmodificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.png"))); // NOI18N
+        jbtnmodificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/emitir fact.png"))); // NOI18N
         jbtnmodificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnmodificarActionPerformed(evt);
             }
         });
 
-        jbtneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        jbtneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminarr.png"))); // NOI18N
         jbtneliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtneliminarActionPerformed(evt);

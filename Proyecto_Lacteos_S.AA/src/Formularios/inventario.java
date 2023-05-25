@@ -291,13 +291,13 @@ public class inventario extends javax.swing.JFrame {
 
     private void jtextproKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextproKeyTyped
 //sentecia de ingresar solo letras    
-      char numeros=evt.getKeyChar();
-    if (Character.isLetter(numeros)) {
+        char numeros=evt.getKeyChar();
+    if (Character.isDigit(numeros)) {
         getToolkit().beep();
     
         evt.consume();
-    JOptionPane.showMessageDialog(rootPane,"Porfavor ingrese solo numeros");
-    }  
+    JOptionPane.showMessageDialog(rootPane," Porfavor ingrese solo letras y caracteres");
+    }
     }//GEN-LAST:event_jtextproKeyTyped
 
     private void jtextcanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtextcanKeyTyped
